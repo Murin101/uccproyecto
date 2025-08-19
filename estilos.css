@@ -1,0 +1,83 @@
+body {
+    font-family: 'Baloo 2', cursive;
+    background-color: #fef9f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #ffe0b2;
+    padding: 2em 0;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in;
+}
+
+h1 {
+    color: #ff7043;
+    margin-bottom: 0.2em;
+}
+
+h2 {
+    color: #ff8a65;
+    margin-bottom: 0.5em;
+}
+
+.consejos, .informacion {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1.5em;
+    background-color: #fff3e0;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    animation: slideUp 1s ease-in;
+}
+
+footer {
+    background-color: #ffe0b2;
+    padding: 1em 0;
+    text-align: center;
+}
+
+/* Animaciones suaves */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Clase para animaciones en scroll */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Estilo para botones */
+.btn {
+    background-color: #ff7043;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff5722;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .consejos, .informacion {
+        margin: 1em;
+        padding: 1em;
+    }
+}
