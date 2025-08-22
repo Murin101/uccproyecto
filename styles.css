@@ -8,7 +8,6 @@
     --color-light: #F7FFF7;
     --color-dark: #292F36;
     --color-ucc-green: #4CAF50;
-    --color-yellow-pastel: #FFF8E1;
 }
 
 * {
@@ -18,15 +17,10 @@
 }
 
 body {
-    font-family: 'Solitreo', 'Comic Neue', sans-serif;
-    background-color: var(--color-yellow-pastel);
+    font-family: 'Varela Round', 'Comic Neue', sans-serif;
+    background-color: var(--color-light);
     color: var(--color-dark);
     line-height: 1.6;
-    overflow-x: hidden; /* Eliminar scroll horizontal */
-}
-
-html {
-    overflow-x: hidden; /* Eliminar scroll horizontal */
 }
 
 /* =====================================================
@@ -36,177 +30,26 @@ html {
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
 /* =====================================================
    TIPOGRAFÍA
 ===================================================== */
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
     font-family: 'Comic Neue', cursive;
     margin: 0;
 }
 
-/* =====================================================
-   TÍTULO PRINCIPAL CON MARCO Y BORDES
-===================================================== */
-.title-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-}
-
-.title-frame {
-    background: var(--color-yellow-pastel);
-    border: 5px solid var(--color-primary);
-    border-radius: 20px;
-    padding: 1.5rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    position: relative;
-    overflow: hidden;
-    max-width: 600px;
-    width: 100%;
-}
-
-.title-frame::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, var(--color-primary), var(--color-accent), var(--color-secondary), var(--color-primary));
-    border-radius: 20px;
-    z-index: -1;
-    animation: borderGlow 3s ease-in-out infinite;
-}
-
-@keyframes borderGlow {
-    0%, 100% { 
-        background: linear-gradient(45deg, var(--color-primary), var(--color-accent), var(--color-secondary), var(--color-primary));
-    }
-    50% { 
-        background: linear-gradient(45deg, var(--color-secondary), var(--color-primary), var(--color-accent), var(--color-secondary));
-    }
-}
-
-.title-inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.title-icon {
-    font-size: 3rem;
-    color: var(--color-primary);
-    animation: bounce 2s infinite;
-    filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.3));
-}
-
-.title-icon-right {
-    font-size: 3rem;
-    color: var(--color-secondary);
-    animation: bounce 2s infinite 0.5s;
-    filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.3));
-}
-
-.main-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-family: 'Comic Neue', cursive;
-    line-height: 1;
-}
-
-.title-bold {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: var(--color-dark);
-    text-shadow: 3px 3px 0px var(--color-accent), 
-                 6px 6px 0px rgba(0,0,0,0.2);
-    letter-spacing: 2px;
-    margin-bottom: 0.2rem;
-}
-
-.title-highlight {
+h1 {
     font-size: 2.2rem;
-    font-weight: 700;
-    color: white;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-    padding: 0.3rem 1rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    border: 3px solid var(--color-accent);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
-.title-ribbon {
-    background: var(--color-accent);
-    color: var(--color-dark);
-    padding: 0.8rem 1.5rem;
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    text-align: center;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2),
-                0 4px 8px rgba(0,0,0,0.2);
-    border: 2px solid var(--color-primary);
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
-}
-
-.header-subtitle {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    opacity: 0.9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.pulse-heart {
-    color: #FF6B6B;
-    animation: pulse 1.5s ease-in-out infinite;
-}
-
-/* =====================================================
-   ANIMACIONES DEL TÍTULO
-===================================================== */
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* =====================================================
-   TÍTULOS DE SECCIONES
-===================================================== */
 h2 {
     color: var(--color-primary);
-    font-size: 1.8rem;
-    margin: 2rem 0 1rem;
+    font-size: 1.6rem;
+    margin: 1.5rem 0 1rem;
     position: relative;
     display: inline-block;
 }
@@ -221,6 +64,18 @@ h2::after {
     background: var(--color-secondary);
 }
 
+.intro-text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.intro-text-center {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #666;
+}
+
 /* =====================================================
    HEADER Y NAVEGACIÓN
 ===================================================== */
@@ -228,88 +83,129 @@ header {
     background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
     color: white;
     text-align: center;
-    padding: 3rem 0;
+    padding: 1.5rem 0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-
-header::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-    animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
-    50% { transform: translate(-50%, -50%) rotate(180deg); }
 }
 
 .header-logo {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 15px;
+    left: 15px;
     background: white;
-    padding: 10px;
+    padding: 8px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-    z-index: 10;
 }
 
 .header-logo:hover {
-    transform: scale(1.05) rotate(5deg);
+    transform: scale(1.05);
 }
 
 .header-logo img {
-    height: 50px;
+    height: 40px;
     width: auto;
     display: block;
+}
+
+.title-container {
+    margin-top: 1rem;
+}
+
+.title-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-inner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0.9;
+}
+
+.title-bold {
+    font-weight: 700;
+}
+
+.title-highlight {
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+.title-icon,
+.title-icon-right {
+    font-size: 2rem;
+    color: var(--color-accent);
+    animation: bounce 2s infinite;
+}
+
+.title-ribbon {
+    margin-top: 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.header-subtitle {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    opacity: 0.9;
+}
+
+.pulse-heart {
+    animation: pulse 1.5s infinite;
+    color: var(--color-accent);
 }
 
 /* =====================================================
    SECCIONES PRINCIPALES
 ===================================================== */
 .consejos, 
-.informacion {
+.informacion,
+.mitos-realidades {
     background: white;
     border-radius: 15px;
-    padding: 2rem;
-    margin-bottom: 2rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
     box-shadow: 0 6px 16px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
 }
 
 .consejos:hover, 
-.informacion:hover {
+.informacion:hover,
+.mitos-realidades:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 /* =====================================================
-   GRILLA DE CONSEJOS - ACTUALIZADA PARA 6 CARDS
+   GRILLA DE CONSEJOS
 ===================================================== */
 .tips-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 .tip-card {
     background: var(--color-light);
-    padding: 1.5rem;
+    padding: 1.2rem;
     border-radius: 12px;
     text-align: center;
     transition: all 0.3s ease;
     border: 2px solid var(--color-secondary);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .tip-card:hover {
@@ -319,8 +215,8 @@ header::before {
 }
 
 .tip-card i {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
     transition: transform 0.3s ease;
 }
 
@@ -328,195 +224,331 @@ header::before {
     transform: rotate(10deg) scale(1.2);
 }
 
-/* =====================================================
-   ICONOS ESPECÍFICOS PARA CADA TIP-CARD
-===================================================== */
-/* Card 1: Frutas y verduras */
-.tip-card:nth-child(1) i {
-    color: #FF6B6B; /* Rojo para frutas y verduras */
+.tip-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark);
 }
 
-.tip-card:nth-child(1) i::before {
-    content: "\f787"; /* fa-carrot */
-}
-
-/* Card 2: Hidratación natural */
-.tip-card:nth-child(2) i {
-    color: #4ECDC4; /* Azul para agua */
-}
-
-.tip-card:nth-child(2) i::before {
-    content: "\f043"; /* fa-tint */
-}
-
-/* Card 3: Menos procesados - MANTENER ORIGINAL */
-.tip-card:nth-child(3) i {
-    color: #FFD166; /* Amarillo para procesados */
-}
-
-.tip-card:nth-child(3) i::before {
-    content: "\f786"; /* fa-candy-cane - MANTENER ORIGINAL */
-}
-
-/* Card 4: El descanso */
-.tip-card:nth-child(4) i {
-    color: #9C27B0; /* Púrpura para descanso */
-}
-
-.tip-card:nth-child(4) i::before {
-    content: "\f236"; /* fa-bed */
-}
-
-/* Card 5: Sal - CAMBIADO A MONTÍCULO DE SAL */
-.tip-card:nth-child(5) i {
-    color: #E0E0E0; /* Gris claro para sal */
-}
-
-.tip-card:nth-child(5) i::before {
-    content: "\f0d6"; /* fa-cube para representar montículo/cristales de sal */
-}
-
-/* Card 6: El juego como movimiento */
-.tip-card:nth-child(6) i {
-    color: #4CAF50; /* Verde para actividad física */
-}
-
-.tip-card:nth-child(6) i::before {
-    content: "\f70c"; /* fa-running */
+.tip-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    color: #666;
 }
 
 /* =====================================================
-   GRILLA DE MERIENDAS - DISEÑO HORIZONTAL
+   COLORES DE ICONOS
 ===================================================== */
-.meriendas-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Una columna para que cada card ocupe toda la fila */
-    gap: 2rem;
-    margin-top: 2rem;
+.icon-fruit { 
+    color: #FF6B6B; 
 }
 
-.merienda-card {
+.icon-water { 
+    color: #4ECDC4; 
+}
+
+.icon-processed { 
+    color: #FFD166; 
+}
+
+.icon-check { 
+    color: #4ECDC4; 
+}
+
+/* =====================================================
+   SECCIÓN DE RECETAS OPTIMIZADA
+===================================================== */
+.meriendas-grid-optimizada {
     display: flex;
-    flex-direction: row;
-    align-items: stretch; /* Estirar elementos para igualar altura */
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.fila-recetas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+.merienda-card-compacta {
     background: white;
-    padding: 0; /* Sin padding para que los elementos ocupen toda la card */
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: 2px solid transparent;
-    position: relative;
-    overflow: hidden;
+    border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    min-height: 300px; /* Altura mínima para consistencia */
-}
-
-.merienda-card:nth-child(1) {
-    border-color: var(--color-primary);
-}
-
-.merienda-card:nth-child(2) {
-    border-color: var(--color-secondary);
-}
-
-.merienda-card:nth-child(3) {
-    border-color: var(--color-ucc-green);
-}
-
-.merienda-card:nth-child(4) {
-    border-color: var(--color-accent);
-}
-
-.merienda-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-
-.merienda-image {
-    flex: 0 0 40%; /* 40% del ancho, no crece ni se encoge */
-    position: relative;
+    transition: all 0.3s ease;
     overflow: hidden;
-    border-radius: 15px 0 0 15px; /* Redondear solo las esquinas izquierdas */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
-.merienda-image img {
+.merienda-card-compacta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.merienda-image-compacta {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+}
+
+.merienda-image-compacta img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
+    transition: transform 0.3s ease;
 }
 
-.merienda-image i {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 2rem;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 8px;
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+.merienda-card-compacta:hover .merienda-image-compacta img {
+    transform: scale(1.05);
 }
 
-.merienda-content {
-    flex: 1; /* Ocupa el resto del espacio */
-    padding: 2rem;
+.merienda-content-compacta {
+    padding: 1rem;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
-.merienda-content h4 {
+.merienda-content-compacta h4 {
     font-family: 'Comic Neue', cursive;
-    font-size: 1.4rem;
-    color: var(--color-dark);
-    margin-bottom: 1rem;
+    color: #FF6B6B;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
     text-align: center;
-    border-bottom: 2px solid var(--color-accent);
-    padding-bottom: 0.5rem;
 }
 
-.receta {
-    flex: 1;
+.receta-compacta {
+    flex-grow: 1;
 }
 
-.receta h5 {
+.receta-compacta h5 {
     font-family: 'Comic Neue', cursive;
-    font-size: 1.1rem;
-    color: var(--color-primary);
-    margin: 1rem 0 0.5rem 0;
+    color: #4ECDC4;
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
     font-weight: 700;
 }
 
-.receta ul {
+.receta-compacta ul {
+    margin: 0 0 0.8rem 0;
+    padding-left: 0.8rem;
+    font-size: 0.75rem;
+    line-height: 1.3;
+}
+
+.receta-compacta ul li {
+    margin-bottom: 0.2rem;
+    color: #666;
+}
+
+.receta-compacta p {
+    font-size: 0.75rem;
+    color: #555;
+    background: #f8f9fa;
+    padding: 0.6rem;
+    border-radius: 6px;
+    margin: 0;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+/* =====================================================
+   SECCIÓN MITOS Y REALIDADES - DISEÑO DE NUBES
+===================================================== */
+.mitos-realidades {
+    padding: 2.5rem 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.nubes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem 1.5rem;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.nube-completa {
+    position: relative;
+    background: #ffffff;
+    border-radius: 40px;
+    padding: 1.8rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    transition: all 0.4s ease;
+    animation: flotar 6s ease-in-out infinite;
+}
+
+.nube-completa::before {
+    content: '';
+    position: absolute;
+    background: #ffffff;
+    border-radius: 40px;
+    top: -20px;
+    left: 8px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.nube-completa::after {
+    content: '';
+    position: absolute;
+    background: #ffffff;
+    border-radius: 25px;
+    top: -12px;
+    right: 12px;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.nube-1::before {
+    left: 15px;
+    width: 45px;
+    height: 45px;
+}
+
+.nube-2::before {
+    left: 12px;
+    width: 42px;
+    height: 42px;
+}
+
+.nube-3::after {
+    right: 15px;
+    width: 35px;
+    height: 35px;
+}
+
+.nube-4::before {
+    left: 18px;
+    width: 38px;
+    height: 38px;
+}
+
+.nube-1 { animation-delay: 0s; }
+.nube-2 { animation-delay: -2s; }
+.nube-3 { animation-delay: -4s; }
+.nube-4 { animation-delay: -1s; }
+
+.nube-completa:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.nube-contenido {
+    position: relative;
+    z-index: 3;
+}
+
+.mito-parte {
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.etiqueta-mito {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+    box-shadow: 0 3px 10px rgba(255, 107, 107, 0.3);
+}
+
+.etiqueta-mito i {
+    font-size: 1rem;
+    margin-right: 0.4rem;
+    animation: girar 3s linear infinite;
+}
+
+.texto-mito {
+    font-size: 0.9rem;
+    color: #c62828;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.3;
+    margin: 0;
+    padding: 0.8rem;
+    border-radius: 12px;
+    border-left: 3px solid #FF6B6B;
+}
+
+.separador-nube {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.separador-nube i {
+    color: #FFD166;
+    font-size: 1.2rem;
+    animation: brillar 2s ease-in-out infinite;
+}
+
+.realidad-parte {
+    text-align: center;
+}
+
+.etiqueta-realidad {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #4ECDC4, #6FDDCC);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+    box-shadow: 0 3px 10px rgba(78, 205, 196, 0.3);
+}
+
+.etiqueta-realidad i {
+    font-size: 1rem;
+    margin-right: 0.4rem;
+    animation: pulsar 2s ease-in-out infinite;
+}
+
+.texto-realidad {
+    font-size: 0.9rem;
+    color: #2e7d32;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0;
+    padding: 0.8rem;
+    border-radius: 12px;
+    border-left: 3px solid #4ECDC4;
+}
+
+/* =====================================================
+   BENEFICIOS
+===================================================== */
+.beneficios-lista {
     list-style: none;
     padding: 0;
-    margin: 0 0 1rem 0;
+    font-size: 1rem;
 }
 
-.receta ul li {
-    background: var(--color-light);
-    padding: 0.4rem 0.8rem;
-    margin: 0.3rem 0;
-    border-radius: 8px;
-    border-left: 3px solid var(--color-secondary);
-    font-size: 0.9rem;
-    transition: all 0.2s ease;
+.beneficios-lista li {
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
 }
 
-.receta ul li:hover {
-    background: var(--color-yellow-pastel);
-    transform: translateX(5px);
-}
-
-.receta p {
-    background: var(--color-accent);
-    color: var(--color-dark);
-    padding: 1rem;
-    border-radius: 10px;
-    margin: 0;
-    font-weight: 600;
-    text-align: center;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+.beneficios-lista i {
+    margin-right: 0.8rem;
+    font-size: 1.1rem;
 }
 
 /* =====================================================
@@ -524,77 +556,66 @@ header::before {
 ===================================================== */
 .datos-importantes {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .dato-card {
-    padding: 2rem 1.5rem;
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+    color: white;
+    padding: 1.5rem;
     border-radius: 15px;
     text-align: center;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.dato-card:nth-child(1) {
-    background: linear-gradient(135deg, #4ECDC4, #44A08D);
-}
-
-.dato-card:nth-child(2) {
-    background: linear-gradient(135deg, #FF6B6B, #FF8E53);
-}
-
-.dato-card:nth-child(3) {
-    background: linear-gradient(135deg, #FFD166, #FF9A56);
+    cursor: pointer;
 }
 
 .dato-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .dato-card h3 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    font-family: 'Comic Neue', cursive;
+    font-size: 2.5rem;
     font-weight: 700;
-    color: white;
+    margin-bottom: 0.5rem;
+    font-family: 'Comic Neue', cursive;
 }
 
 .dato-card p {
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    font-weight: 500;
-    line-height: 1.4;
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+/* =====================================================
+   SECCIÓN MOTIVACIONAL
+===================================================== */
+.motivacional {
+    text-align: center;
+    background: linear-gradient(135deg, #FFD166, #FF6B6B);
     color: white;
 }
 
-/* =====================================================
-   COLORES DE ICONOS - MERIENDAS
-===================================================== */
-.icon-merienda-1 {
-    color: var(--color-primary);
+.motivacional-title {
+    color: white;
+    border-bottom: 2px solid white;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-.icon-merienda-2 {
-    color: var(--color-secondary);
+.motivacional-text {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
 }
 
-.icon-merienda-3 {
-    color: var(--color-ucc-green);
-}
-
-.icon-merienda-4 {
-    color: var(--color-accent);
-}
-
-/* =====================================================
-   COLORES DE ICONOS - BENEFICIOS
-===================================================== */
-.icon-check { 
-    color: #4ECDC4; 
+.motivacional-image img {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 /* =====================================================
@@ -604,45 +625,56 @@ footer {
     background: var(--color-dark);
     color: white;
     text-align: center;
-    padding: 3rem 0;
-    margin-top: 3rem;
+    padding: 2rem 0;
+    margin-top: 2rem;
 }
 
 .footer-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .footer-logo {
     background: white;
-    padding: 20px;
-    border-radius: 15px;
+    padding: 15px;
+    border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
 }
 
 .footer-logo:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 .footer-logo img {
-    height: 100px;
+    height: 80px;
     width: auto;
     display: block;
 }
 
+.footer-info h3,
+.footer-social h3 {
+    font-family: 'Comic Neue', cursive;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.footer-info p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+}
+
 .social-icons {
-    margin-top: 1rem;
+    margin-top: 0.8rem;
 }
 
 .social-icons a {
     color: white;
-    margin: 0 15px;
-    font-size: 1.8rem;
+    margin: 0 12px;
+    font-size: 1.5rem;
     transition: all 0.3s ease;
-    text-decoration: none;
 }
 
 .social-icons a:hover {
@@ -651,33 +683,49 @@ footer {
 }
 
 .university-info {
-    margin-top: 1rem;
-    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
     opacity: 0.8;
-}
-
-/* =====================================================
-   MEJORAS DE ACCESIBILIDAD
-===================================================== */
-.tip-card:focus,
-.merienda-card:focus,
-.dato-card:focus {
-    outline: 3px solid var(--color-primary);
-    outline-offset: 2px;
 }
 
 /* =====================================================
    ANIMACIONES
 ===================================================== */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    33% {
+        transform: translateY(-8px) rotate(0.3deg);
     }
+    66% {
+        transform: translateY(-4px) rotate(-0.3deg);
+    }
+}
+
+@keyframes girar {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulsar {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+@keyframes brillar {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
 }
 
 .animate-on-scroll {
@@ -689,67 +737,33 @@ footer {
     animation: fadeInUp 0.8s forwards;
 }
 
-.pulse-animation {
-    animation: pulse 2s infinite;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* =====================================================
-   EFECTOS HOVER PARA EL TÍTULO
-===================================================== */
-.title-frame:hover {
-    transform: scale(1.02);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-}
-
-.title-frame:hover .title-icon,
-.title-frame:hover .title-icon-right {
-    animation-duration: 1s;
-}
-
-.title-frame:hover .title-bold {
-    text-shadow: 4px 4px 0px var(--color-accent), 
-                 8px 8px 0px rgba(0,0,0,0.3);
-}
-
-.title-frame:hover .title-highlight {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-}
-
-/* =====================================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN - MÓVIL OPTIMIZADO
 ===================================================== */
 @media (max-width: 768px) {
     .container {
         width: 95%;
+        padding: 10px 0;
     }
     
-    .title-frame {
-        padding: 1.2rem;
-        max-width: 500px;
-    }
-    
-    .title-inner {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    .title-bold {
-        font-size: 2.2rem;
-    }
-    
-    .title-highlight {
+    h1 {
         font-size: 1.8rem;
     }
     
-    .title-icon,
-    .title-icon-right {
-        font-size: 2.5rem;
-    }
-    
-    .title-ribbon {
-        font-size: 1rem;
-        padding: 0.6rem 1rem;
+    h2 {
+        font-size: 1.4rem;
+        margin: 1rem 0 0.8rem;
     }
     
     .header-logo {
@@ -758,158 +772,244 @@ footer {
         display: inline-block;
     }
     
-    .tips-grid,
-    .datos-importantes {
+    .header-logo img {
+        height: 35px;
+    }
+    
+    .title-inner {
+        gap: 0.5rem;
+    }
+    
+    .title-icon,
+    .title-icon-right {
+        font-size: 1.5rem;
+    }
+    
+    .title-ribbon {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.8rem;
+    }
+    
+    /* Secciones más compactas */
+    .consejos, 
+    .informacion,
+    .mitos-realidades {
+        padding: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    /* Tips grid más compacto */
+    .tips-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.8rem;
+    }
+    
+    .tip-card {
+        padding: 1rem;
+    }
+    
+    .tip-card h3 {
+        font-size: 1rem;
+    }
+    
+    .tip-card p {
+        font-size: 0.8rem;
+    }
+    
+    /* Recetas en móviles - una por fila */
+    .fila-recetas {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
     
-    /* Responsive para meriendas - cambiar a vertical en móvil */
-    .merienda-card {
-        flex-direction: column;
-        min-height: auto;
+    .merienda-image-compacta {
+        height: 140px;
     }
     
-    .merienda-image {
-        flex: 0 0 200px; /* Altura fija para móvil */
-        border-radius: 15px 15px 0 0; /* Redondear esquinas superiores */
+    .merienda-content-compacta h4 {
+        font-size: 0.85rem;
     }
     
-    .merienda-content {
-        padding: 1.5rem;
+    .receta-compacta ul {
+        font-size: 0.7rem;
     }
     
-    .footer-content {
+    .receta-compacta p {
+        font-size: 0.7rem;
+    }
+    
+    /* Nubes responsive */
+    .nubes-container {
+        grid-template-columns: 1fr;
         gap: 1.5rem;
     }
     
-    .footer-logo img {
-        height: 80px;
+    .nube-completa {
+        padding: 1.5rem;
     }
     
-    .dato-card h3 {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .header-logo img {
-        height: 40px;
+    .mitos-realidades {
+        padding: 2rem 1.2rem;
     }
     
-    .footer-logo img {
-        height: 70px;
+    .texto-mito, .texto-realidad {
+        font-size: 0.85rem;
+        padding: 0.7rem;
     }
     
-    .social-icons a {
-        font-size: 1.5rem;
-        margin: 0 10px;
+    /* Datos importantes más compactos */
+    .datos-importantes {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .dato-card {
+        padding: 1.2rem;
     }
     
     .dato-card h3 {
         font-size: 2rem;
     }
     
-    .consejos,
-    .informacion {
-        padding: 1.5rem;
+    .dato-card p {
+        font-size: 0.85rem;
     }
     
-    .tip-card {
-        padding: 1.2rem;
+    /* Motivacional */
+    .motivacional-image img {
+        max-width: 300px;
+        height: 150px;
     }
     
-    .title-bold {
-        font-size: 1.9rem;
+    /* Footer más compacto */
+    .footer-content {
+        gap: 1.2rem;
     }
     
-    .title-highlight {
-        font-size: 1.5rem;
+    .footer-logo img {
+        height: 60px;
     }
     
-    .title-icon,
-    .title-icon-right {
-        font-size: 2.2rem;
-    }
-    
-    .header-subtitle {
-        font-size: 1rem;
-    }
-    
-    .title-ribbon {
-        font-size: 0.9rem;
-        padding: 0.5rem 0.8rem;
+    .social-icons a {
+        font-size: 1.3rem;
+        margin: 0 10px;
     }
 }
 
 @media (max-width: 480px) {
-    .title-frame {
-        padding: 1rem;
-        border-width: 3px;
-    }
-    
-    .title-bold {
-        font-size: 1.7rem;
-        letter-spacing: 1px;
-    }
-    
-    .title-highlight {
-        font-size: 1.3rem;
-        padding: 0.2rem 0.8rem;
-    }
-    
-    .title-icon,
-    .title-icon-right {
-        font-size: 2rem;
+    h1 {
+        font-size: 1.6rem;
     }
     
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     
-    .dato-card {
-        padding: 1.5rem 1rem;
+    .header-logo img {
+        height: 30px;
     }
     
-    .dato-card h3 {
-        font-size: 1.8rem;
+    .consejos, 
+    .informacion,
+    .mitos-realidades {
+        padding: 1rem;
     }
     
-    .title-ribbon {
+    .tips-grid {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+    
+    .tip-card {
+        padding: 0.8rem;
+    }
+    
+    .nube-completa::before,
+    .nube-completa::after {
+        display: none;
+    }
+    
+    .etiqueta-mito, .etiqueta-realidad {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    .separador-nube i {
+        font-size: 1rem;
+    }
+    
+    .merienda-image-compacta {
+        height: 120px;
+    }
+    
+    .merienda-content-compacta {
+        padding: 0.8rem;
+    }
+    
+    .receta-compacta ul {
+        font-size: 0.65rem;
+        padding-left: 0.6rem;
+    }
+    
+    .receta-compacta p {
+        font-size: 0.65rem;
+        padding: 0.5rem;
+    }
+    
+    .motivacional-image img {
+        max-width: 250px;
+        height: 120px;
+    }
+    
+    .footer-logo img {
+        height: 50px;
+    }
+    
+    .social-icons a {
+        font-size: 1.2rem;
+        margin: 0 8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        width: 98%;
+    }
+    
+    h1 {
+        font-size: 1.4rem;
+    }
+    
+    .consejos, 
+    .informacion,
+    .mitos-realidades {
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .tip-card {
+        padding: 0.6rem;
+    }
+    
+    .tip-card h3 {
+        font-size: 0.9rem;
+    }
+    
+    .tip-card p {
+        font-size: 0.75rem;
+    }
+    
+    .nube-completa {
+        padding: 1.2rem;
+    }
+    
+    .merienda-content-compacta h4 {
         font-size: 0.8rem;
-        padding: 0.4rem 0.6rem;
     }
-}
-
-/* =====================================================
-   MEJORAS DE RENDIMIENTO
-===================================================== */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+    
+    .motivacional-image img {
+        max-width: 200px;
+        height: 100px;
     }
-}
-
-/* =====================================================
-   EFECTOS ESPECIALES PARA PADRES
-===================================================== */
-.title-frame:hover .title-ribbon {
-    background: var(--color-primary);
-    color: white;
-    transform: scale(1.05);
-}
-
-/* Brillo sutil en el marco */
-.title-frame::after {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    height: 30%;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
-    border-radius: 15px 15px 50% 50%;
-    pointer-events: none;
 }
 
