@@ -1,1056 +1,328 @@
-/* =====================================================
-   VARIABLES CSS Y CONFIGURACIÓN GENERAL
-===================================================== */
-:root {
-    --color-primary: #FF6B6B;
-    --color-secondary: #4ECDC4;
-    --color-accent: #FFD166;
-    --color-light: #F7FFF7;
-    --color-dark: #292F36;
-    --color-ucc-green: #4CAF50;
-}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Varela Round', 'Comic Neue', sans-serif;
-    background-color: var(--color-light);
-    color: var(--color-dark);
-    line-height: 1.6;
-}
-
-/* =====================================================
-   LAYOUT Y CONTENEDORES
-===================================================== */
-.container {
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 15px 0;
-}
-
-/* =====================================================
-   TIPOGRAFÍA
-===================================================== */
-h1, h2 {
-    font-family: 'Comic Neue', cursive;
-    margin: 0;
-}
-
-h1 {
-    font-size: 2.2rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-}
-
-h2 {
-    color: var(--color-primary);
-    font-size: 1.6rem;
-    margin: 1.5rem 0 1rem;
-    position: relative;
-    display: inline-block;
-}
-
-h2::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 60%;
-    height: 3px;
-    background: var(--color-secondary);
-}
-
-.intro-text {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
-.intro-text-center {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    color: #666;
-}
-
-/* =====================================================
-   HEADER Y NAVEGACIÓN
-===================================================== */
-header {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-    color: white;
-    text-align: center;
-    padding: 1.5rem 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    position: relative;
-}
-
-.header-logo {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: white;
-    padding: 8px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.header-logo:hover {
-    transform: scale(1.05);
-}
-
-.header-logo img {
-    height: 40px;
-    width: auto;
-    display: block;
-}
-
-.title-container {
-    margin-top: 1rem;
-}
-
-.title-frame {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.title-inner {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.main-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 0.9;
-}
-
-.title-bold {
-    font-weight: 700;
-}
-
-.title-highlight {
-    font-weight: 700;
-    color: var(--color-accent);
-}
-
-.title-icon,
-.title-icon-right {
-    font-size: 2rem;
-    color: var(--color-accent);
-    animation: bounce 2s infinite;
-}
-
-.title-ribbon {
-    margin-top: 0.5rem;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 0.3rem 1rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.header-subtitle {
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-    opacity: 0.9;
-}
-
-.pulse-heart {
-    animation: pulse 1.5s infinite;
-    color: var(--color-accent);
-}
-
-/* =====================================================
-   SECCIONES PRINCIPALES
-===================================================== */
-.consejos, 
-.informacion,
-.mitos-realidades {
-    background: white;
-    border-radius: 15px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-}
-
-.consejos:hover, 
-.informacion:hover,
-.mitos-realidades:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
-
-/* =====================================================
-   GRILLA DE CONSEJOS
-===================================================== */
-.tips-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
-.tip-card {
-    background: var(--color-light);
-    padding: 1.2rem;
-    border-radius: 12px;
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 2px solid var(--color-secondary);
-}
-
-.tip-card:hover {
-    transform: scale(1.05);
-    background: white;
-    box-shadow: 0 8px 20px rgba(78, 205, 196, 0.2);
-}
-
-.tip-card i {
-    font-size: 2rem;
-    margin-bottom: 0.8rem;
-    transition: transform 0.3s ease;
-}
-
-.tip-card:hover i {
-    transform: rotate(10deg) scale(1.2);
-}
-
-.tip-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    color: var(--color-dark);
-}
-
-.tip-card p {
-    font-size: 0.9rem;
-    margin-bottom: 0.3rem;
-    color: #666;
-}
-
-/* =====================================================
-   COLORES DE ICONOS
-===================================================== */
-.icon-fruit { 
-    color: #FF6B6B; 
-}
-
-.icon-water { 
-    color: #4ECDC4; 
-}
-
-.icon-processed { 
-    color: #FFD166; 
-}
-
-.icon-check { 
-    color: #4ECDC4; 
-}
-
-/* =====================================================
-   SECCIÓN DE RECETAS OPTIMIZADA
-===================================================== */
-.meriendas-grid-optimizada {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.fila-recetas {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    width: 100%;
-}
-
-.merienda-card-compacta {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-    overflow: hidden;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-}
-
-.merienda-card-compacta:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-}
-
-.merienda-image-compacta {
-    width: 100%;
-    height: 120px;
-    overflow: hidden;
-}
-
-.merienda-image-compacta img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.merienda-card-compacta:hover .merienda-image-compacta img {
-    transform: scale(1.05);
-}
-
-.merienda-content-compacta {
-    padding: 1rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.merienda-content-compacta h4 {
-    font-family: 'Comic Neue', cursive;
-    color: #FF6B6B;
-    font-size: 0.9rem;
-    margin-bottom: 0.8rem;
-    font-weight: 700;
-    text-align: center;
-}
-
-.receta-compacta {
-    flex-grow: 1;
-}
-
-.receta-compacta h5 {
-    font-family: 'Comic Neue', cursive;
-    color: #4ECDC4;
-    font-size: 0.8rem;
-    margin-bottom: 0.4rem;
-    font-weight: 700;
-}
-
-.receta-compacta ul {
-    margin: 0 0 0.8rem 0;
-    padding-left: 0.8rem;
-    font-size: 0.75rem;
-    line-height: 1.3;
-}
-
-.receta-compacta ul li {
-    margin-bottom: 0.2rem;
-    color: #666;
-}
-
-.receta-compacta p {
-    font-size: 0.75rem;
-    color: #555;
-    background: #f8f9fa;
-    padding: 0.6rem;
-    border-radius: 6px;
-    margin: 0;
-    font-weight: 500;
-    line-height: 1.3;
-}
-
-/* =====================================================
-   SECCIÓN MITOS Y REALIDADES - DISEÑO DE NUBES
-===================================================== */
-.mitos-realidades {
-    padding: 2.5rem 1.5rem;
-    margin-bottom: 2rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.nubes-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem 1.5rem;
-    margin-top: 2rem;
-    position: relative;
-    z-index: 2;
-}
-
-.nube-completa {
-    position: relative;
-    background: #ffffff;
-    border-radius: 40px;
-    padding: 1.8rem;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-    transition: all 0.4s ease;
-    animation: flotar 6s ease-in-out infinite;
-}
-
-.nube-completa::before {
-    content: '';
-    position: absolute;
-    background: #ffffff;
-    border-radius: 40px;
-    top: -20px;
-    left: 8px;
-    width: 40px;
-    height: 40px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-}
-
-.nube-completa::after {
-    content: '';
-    position: absolute;
-    background: #ffffff;
-    border-radius: 25px;
-    top: -12px;
-    right: 12px;
-    width: 30px;
-    height: 30px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-}
-
-.nube-1::before {
-    left: 15px;
-    width: 45px;
-    height: 45px;
-}
-
-.nube-2::before {
-    left: 12px;
-    width: 42px;
-    height: 42px;
-}
-
-.nube-3::after {
-    right: 15px;
-    width: 35px;
-    height: 35px;
-}
-
-.nube-4::before {
-    left: 18px;
-    width: 38px;
-    height: 38px;
-}
-
-.nube-1 { animation-delay: 0s; }
-.nube-2 { animation-delay: -2s; }
-.nube-3 { animation-delay: -4s; }
-.nube-4 { animation-delay: -1s; }
-
-.nube-completa:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.nube-contenido {
-    position: relative;
-    z-index: 3;
-}
-
-.mito-parte {
-    margin-bottom: 1.2rem;
-    text-align: center;
-}
-
-.etiqueta-mito {
-    display: inline-flex;
-    align-items: center;
-    background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
-    color: white;
-    padding: 0.4rem 0.8rem;
-    border-radius: 20px;
-    font-family: 'Comic Neue', cursive;
-    font-weight: 700;
-    font-size: 0.8rem;
-    margin-bottom: 0.8rem;
-    box-shadow: 0 3px 10px rgba(255, 107, 107, 0.3);
-}
-
-.etiqueta-mito i {
-    font-size: 1rem;
-    margin-right: 0.4rem;
-    animation: girar 3s linear infinite;
-}
-
-.texto-mito {
-    font-size: 0.9rem;
-    color: #c62828;
-    font-weight: 600;
-    font-style: italic;
-    line-height: 1.3;
-    margin: 0;
-    padding: 0.8rem;
-    border-radius: 12px;
-    border-left: 3px solid #FF6B6B;
-}
-
-.separador-nube {
-    text-align: center;
-    margin: 1rem 0;
-}
-
-.separador-nube i {
-    color: #FFD166;
-    font-size: 1.2rem;
-    animation: brillar 2s ease-in-out infinite;
-}
-
-.realidad-parte {
-    text-align: center;
-}
-
-.etiqueta-realidad {
-    display: inline-flex;
-    align-items: center;
-    background: linear-gradient(135deg, #4ECDC4, #6FDDCC);
-    color: white;
-    padding: 0.4rem 0.8rem;
-    border-radius: 20px;
-    font-family: 'Comic Neue', cursive;
-    font-weight: 700;
-    font-size: 0.8rem;
-    margin-bottom: 0.8rem;
-    box-shadow: 0 3px 10px rgba(78, 205, 196, 0.3);
-}
-
-.etiqueta-realidad i {
-    font-size: 1rem;
-    margin-right: 0.4rem;
-    animation: pulsar 2s ease-in-out infinite;
-}
-
-.texto-realidad {
-    font-size: 0.9rem;
-    color: #2e7d32;
-    font-weight: 600;
-    line-height: 1.3;
-    margin: 0;
-    padding: 0.8rem;
-    border-radius: 12px;
-    border-left: 3px solid #4ECDC4;
-}
-
-/* =====================================================
-   BENEFICIOS
-===================================================== */
-.beneficios-lista {
-    list-style: none;
-    padding: 0;
-    font-size: 1rem;
-}
-
-.beneficios-lista li {
-    margin-bottom: 0.6rem;
-    display: flex;
-    align-items: center;
-}
-
-.beneficios-lista i {
-    margin-right: 0.8rem;
-    font-size: 1.1rem;
-}
-
-/* =====================================================
-   DATOS IMPORTANTES
-===================================================== */
-.datos-importantes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.dato-card {
-    background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
-    color: white;
-    padding: 1.5rem;
-    border-radius: 15px;
-    text-align: center;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.dato-card:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.dato-card h3 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    font-family: 'Comic Neue', cursive;
-}
-
-.dato-card p {
-    font-size: 0.9rem;
-    line-height: 1.3;
-}
-
-/* =====================================================
-   SECCIÓN MOTIVACIONAL
-===================================================== */
-.motivacional {
-    text-align: center;
-    background: linear-gradient(135deg, #FFD166, #FF6B6B);
-    color: white;
-}
-
-.motivacional-title {
-    color: white;
-    border-bottom: 2px solid white;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.motivacional-text {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-}
-
-.motivacional-image img {
-    width: 100%;
-    max-width: 400px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-/* =====================================================
-   FOOTER
-===================================================== */
-footer {
-    background: var(--color-dark);
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 2rem;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.footer-logo {
-    background: white;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease;
-}
-
-.footer-logo:hover {
-    transform: translateY(-3px);
-}
-
-.footer-logo img {
-    height: 80px;
-    width: auto;
-    display: block;
-}
-
-.footer-info h3,
-.footer-social h3 {
-    font-family: 'Comic Neue', cursive;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-}
-
-.footer-info p {
-    margin: 0.2rem 0;
-    font-size: 0.9rem;
-}
-
-.social-icons {
-    margin-top: 0.8rem;
-}
-
-.social-icons a {
-    color: white;
-    margin: 0 12px;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: var(--color-accent);
-    transform: translateY(-3px);
-}
-
-.university-info {
-    margin-top: 0.5rem;
-    font-size: 0.8rem;
-    opacity: 0.8;
-}
-
-/* =====================================================
-   ANIMACIONES
-===================================================== */
-@keyframes flotar {
-    0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    33% {
-        transform: translateY(-8px) rotate(0.3deg);
-    }
-    66% {
-        transform: translateY(-4px) rotate(-0.3deg);
-    }
-}
-
-@keyframes girar {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-@keyframes pulsar {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.1); opacity: 0.8; }
-}
-
-@keyframes brillar {
-    0%, 100% { opacity: 0.7; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.2); }
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-}
-
-.animate-on-scroll {
-    opacity: 0;
-    animation-delay: 0.3s;
-}
-
-.animated {
-    animation: fadeInUp 0.8s forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* =====================================================
-   RESPONSIVE DESIGN - MÓVIL OPTIMIZADO
-===================================================== */
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-        padding: 10px 0;
-    }
-    
-    h1 {
-        font-size: 1.8rem;
-    }
-    
-    h2 {
-        font-size: 1.4rem;
-        margin: 1rem 0 0.8rem;
-    }
-    
-    .header-logo {
-        position: static;
-        margin: 0 auto 1rem;
-        display: inline-block;
-    }
-    
-    .header-logo img {
-        height: 35px;
-    }
-    
-    .title-inner {
-        gap: 0.5rem;
-    }
-    
-    .title-icon,
-    .title-icon-right {
-        font-size: 1.5rem;
-    }
-    
-    .title-ribbon {
-        font-size: 0.7rem;
-        padding: 0.2rem 0.8rem;
-    }
-    
-    /* Secciones más compactas */
-    .consejos, 
-    .informacion,
-    .mitos-realidades {
-        padding: 1.2rem;
-        margin-bottom: 1.2rem;
-    }
-    
-    /* Tips grid más compacto */
-    .tips-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 0.8rem;
-    }
-    
-    .tip-card {
-        padding: 1rem;
-    }
-    
-    .tip-card h3 {
-        font-size: 1rem;
-    }
-    
-    .tip-card p {
-        font-size: 0.8rem;
-    }
-    
-    /* Recetas en móviles - una por fila */
-    .fila-recetas {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .merienda-image-compacta {
-        height: 140px;
-    }
-    
-    .merienda-content-compacta h4 {
-        font-size: 0.85rem;
-    }
-    
-    .receta-compacta ul {
-        font-size: 0.7rem;
-    }
-    
-    .receta-compacta p {
-        font-size: 0.7rem;
-    }
-    
-    /* Nubes responsive */
-    .nubes-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .nube-completa {
-        padding: 1.5rem;
-    }
-    
-    .mitos-realidades {
-        padding: 2rem 1.2rem;
-    }
-    
-    .texto-mito, .texto-realidad {
-        font-size: 0.85rem;
-        padding: 0.7rem;
-    }
-    
-    /* Datos importantes más compactos */
-    .datos-importantes {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .dato-card {
-        padding: 1.2rem;
-    }
-    
-    .dato-card h3 {
-        font-size: 2rem;
-    }
-    
-    .dato-card p {
-        font-size: 0.85rem;
-    }
-    
-    /* Motivacional */
-    .motivacional-image img {
-        max-width: 300px;
-        height: 150px;
-    }
-    
-    /* Footer más compacto */
-    .footer-content {
-        gap: 1.2rem;
-    }
-    
-    .footer-logo img {
-        height: 60px;
-    }
-    
-    .social-icons a {
-        font-size: 1.3rem;
-        margin: 0 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.6rem;
-    }
-    
-    h2 {
-        font-size: 1.2rem;
-    }
-    
-    .header-logo img {
-        height: 30px;
-    }
-    
-    .consejos, 
-    .informacion,
-    .mitos-realidades {
-        padding: 1rem;
-    }
-    
-    .tips-grid {
-        grid-template-columns: 1fr;
-        gap: 0.6rem;
-    }
-    
-    .tip-card {
-        padding: 0.8rem;
-    }
-    
-    .nube-completa::before,
-    .nube-completa::after {
-        display: none;
-    }
-    
-    .etiqueta-mito, .etiqueta-realidad {
-        font-size: 0.7rem;
-        padding: 0.3rem 0.6rem;
-    }
-    
-    .separador-nube i {
-        font-size: 1rem;
-    }
-    
-    .merienda-image-compacta {
-        height: 120px;
-    }
-    
-    .merienda-content-compacta {
-        padding: 0.8rem;
-    }
-    
-    .receta-compacta ul {
-        font-size: 0.65rem;
-        padding-left: 0.6rem;
-    }
-    
-    .receta-compacta p {
-        font-size: 0.65rem;
-        padding: 0.5rem;
-    }
-    
-    .motivacional-image img {
-        max-width: 250px;
-        height: 120px;
-    }
-    
-    .footer-logo img {
-        height: 50px;
-    }
-    
-    .social-icons a {
-        font-size: 1.2rem;
-        margin: 0 8px;
-    }
-}
-
-@media (max-width: 360px) {
-    .container {
-        width: 98%;
-    }
-    
-    h1 {
-        font-size: 1.4rem;
-    }
-    
-    .consejos, 
-    .informacion,
-    .mitos-realidades {
-        padding: 0.8rem;
-        margin-bottom: 1rem;
-    }
-    
-    .tip-card {
-        padding: 0.6rem;
-    }
-    
-    .tip-card h3 {
-        font-size: 0.9rem;
-    }
-    
-    .tip-card p {
-        font-size: 0.75rem;
-    }
-    
-    .nube-completa {
-        padding: 1.2rem;
-    }
-    
-    .merienda-content-compacta h4 {
-        font-size: 0.8rem;
-    }
-    
-    .motivacional-image img {
-        max-width: 200px;
-        height: 100px;
-    }
-}
         /* =====================================================
-           ESTILOS PARA LA SECCIÓN DE RECETAS OPTIMIZADA
+           VARIABLES CSS Y CONFIGURACIÓN GENERAL
+        ===================================================== */
+        :root {
+            --color-primary: #FF6B6B;
+            --color-secondary: #4ECDC4;
+            --color-accent: #FFD166;
+            --color-light: #F7FFF7;
+            --color-dark: #292F36;
+            --color-ucc-green: #4CAF50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Varela Round', 'Comic Neue', sans-serif;
+            background-color: var(--color-light);
+            color: var(--color-dark);
+            line-height: 1.6;
+        }
+
+        /* =====================================================
+           LAYOUT Y CONTENEDORES
+        ===================================================== */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 15px 0;
+        }
+
+        /* =====================================================
+           TIPOGRAFÍA
+        ===================================================== */
+        h1, h2 {
+            font-family: 'Comic Neue', cursive;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            color: var(--color-primary);
+            font-size: 1.6rem;
+            margin: 1.5rem 0 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background: var(--color-secondary);
+        }
+
+        /* =====================================================
+           HEADER Y NAVEGACIÓN
+        ===================================================== */
+        header {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .header-logo {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: white;
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .header-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .header-logo img {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+
+        .title-container {
+            margin-top: 1rem;
+        }
+
+        .title-frame {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title-inner {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .main-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 0.9;
+        }
+
+        .title-bold {
+            font-weight: 700;
+        }
+
+        .title-highlight {
+            font-weight: 700;
+            color: var(--color-accent);
+        }
+
+        .title-icon,
+        .title-icon-right {
+            font-size: 2rem;
+            color: var(--color-accent);
+            animation: bounce 2s infinite;
+        }
+
+        .title-ribbon {
+            margin-top: 0.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .header-subtitle {
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .pulse-heart {
+            animation: pulse 1.5s infinite;
+            color: var(--color-accent);
+        }
+
+        /* =====================================================
+           SECCIONES PRINCIPALES
+        ===================================================== */
+        .consejos, 
+        .informacion,
+        .mitos-realidades {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .consejos:hover, 
+        .informacion:hover,
+        .mitos-realidades:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        /* =====================================================
+           GRILLA DE CONSEJOS - OPTIMIZADA SIN ESPACIOS
+        ===================================================== */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .tip-card {
+            background: var(--color-light);
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid var(--color-secondary);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 200px;
+        }
+
+        .tip-card:hover {
+            transform: scale(1.05);
+            background: white;
+            box-shadow: 0 8px 20px rgba(78, 205, 196, 0.2);
+        }
+
+        .tip-card i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .tip-card:hover i {
+            transform: rotate(10deg) scale(1.2);
+        }
+
+        .tip-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-dark);
+        }
+
+        .tip-card p {
+            font-size: 0.85rem;
+            margin-bottom: 0.2rem;
+            color: #666;
+            line-height: 1.3;
+        }
+
+        /* Texto multicolor para "Más Colores = Más Nutrientes" */
+        .texto-multicolor {
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #FFD166, #9B59B6, #E74C3C, #27AE60);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            font-size: 0.9rem !important;
+            animation: arcoiris 3s linear infinite;
+        }
+
+        @keyframes arcoiris {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        /* Centrar las dos últimas tarjetas */
+        .tips-grid .tip-card:nth-child(5) {
+            grid-column: 2;
+        }
+
+        .tips-grid .tip-card:nth-child(6) {
+            grid-column: 3;
+        }
+
+        /* =====================================================
+           COLORES DE ICONOS ÚNICOS
+        ===================================================== */
+        .icon-fruit { 
+            color: #E74C3C; /* Rojo manzana */
+        }
+
+        .icon-water { 
+            color: #3498DB; /* Azul agua */
+        }
+
+        .icon-chocolate { 
+            color: #8B4513; /* Marrón chocolate */
+        }
+
+        .icon-sleep { 
+            color: #9B59B6; /* Púrpura descanso */
+        }
+
+        .icon-salt { 
+            color: #BDC3C7; /* Gris sal */
+        }
+
+        .icon-movement { 
+            color: #27AE60; /* Verde movimiento */
+        }
+
+        .icon-check { 
+            color: #4ECDC4; 
+        }
+
+        /* =====================================================
+           SECCIÓN DE RECETAS OPTIMIZADA
         ===================================================== */
         .meriendas-grid-optimizada {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
-            margin-top: 2rem;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
 
         .fila-recetas {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
+            gap: 1rem;
             width: 100%;
         }
 
         .merienda-card-compacta {
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
             overflow: hidden;
             cursor: pointer;
             display: flex;
             flex-direction: column;
-            height: auto;
         }
 
         .merienda-card-compacta:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
 
         .merienda-image-compacta {
             width: 100%;
-            height: 150px;
+            height: 120px;
             overflow: hidden;
-            border-radius: 15px 15px 0 0;
         }
 
         .merienda-image-compacta img {
@@ -1065,7 +337,7 @@ footer {
         }
 
         .merienda-content-compacta {
-            padding: 1.5rem;
+            padding: 1rem;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
@@ -1074,8 +346,8 @@ footer {
         .merienda-content-compacta h4 {
             font-family: 'Comic Neue', cursive;
             color: #FF6B6B;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
             font-weight: 700;
             text-align: center;
         }
@@ -1087,149 +359,121 @@ footer {
         .receta-compacta h5 {
             font-family: 'Comic Neue', cursive;
             color: #4ECDC4;
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
+            font-size: 0.8rem;
+            margin-bottom: 0.4rem;
             font-weight: 700;
         }
 
         .receta-compacta ul {
-            margin: 0 0 1rem 0;
-            padding-left: 1rem;
-            font-size: 0.9rem;
-            line-height: 1.4;
+            margin: 0 0 0.8rem 0;
+            padding-left: 0.8rem;
+            font-size: 0.75rem;
+            line-height: 1.3;
         }
 
         .receta-compacta ul li {
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.2rem;
             color: #666;
         }
 
         .receta-compacta p {
-            font-size: 0.9rem;
+            font-size: 0.75rem;
             color: #555;
             background: #f8f9fa;
-            padding: 0.8rem;
-            border-radius: 8px;
+            padding: 0.6rem;
+            border-radius: 6px;
             margin: 0;
             font-weight: 500;
-            line-height: 1.4;
+            line-height: 1.3;
         }
 
         /* =====================================================
-           ESTILOS PARA LA SECCIÓN MITOS Y REALIDADES - DISEÑO DE NUBES REALES
+           SECCIÓN MITOS Y REALIDADES - DISEÑO DE NUBES
         ===================================================== */
         .mitos-realidades {
-            background: white;
-            border-radius: 30px;
-            padding: 4rem 2rem;
-            margin-bottom: 3rem;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+            padding: 2.5rem 1.5rem;
+            margin-bottom: 2rem;
             position: relative;
             overflow: hidden;
         }
 
         .nubes-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem 1.5rem;
+            margin-top: 2rem;
             position: relative;
             z-index: 2;
         }
 
-        /* Forma de nube real */
         .nube-completa {
             position: relative;
             background: #ffffff;
-            border-radius: 50px;
-            padding: 2.5rem;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border-radius: 40px;
+            padding: 1.8rem;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
             transition: all 0.4s ease;
             animation: flotar 6s ease-in-out infinite;
         }
 
-        /* Crear la forma de nube con pseudo-elementos */
         .nube-completa::before {
             content: '';
             position: absolute;
             background: #ffffff;
-            border-radius: 50px;
-            top: -25px;
-            left: 10px;
-            width: 50px;
-            height: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-radius: 40px;
+            top: -20px;
+            left: 8px;
+            width: 40px;
+            height: 40px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
         }
 
         .nube-completa::after {
             content: '';
             position: absolute;
             background: #ffffff;
-            border-radius: 30px;
-            top: -15px;
-            right: 15px;
-            width: 40px;
-            height: 40px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-radius: 25px;
+            top: -12px;
+            right: 12px;
+            width: 30px;
+            height: 30px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
         }
 
-        /* Bultos adicionales de las nubes */
         .nube-1::before {
-            left: 20px;
-            width: 60px;
-            height: 60px;
-        }
-
-        .nube-2::before {
             left: 15px;
-            width: 55px;
-            height: 55px;
-        }
-
-        .nube-3::after {
-            right: 20px;
             width: 45px;
             height: 45px;
         }
 
-        .nube-4::before {
-            left: 25px;
-            width: 50px;
-            height: 50px;
+        .nube-2::before {
+            left: 12px;
+            width: 42px;
+            height: 42px;
         }
 
-        /* Animaciones diferentes para cada nube */
-        .nube-1 {
-            animation-delay: 0s;
+        .nube-3::after {
+            right: 15px;
+            width: 35px;
+            height: 35px;
         }
 
-        .nube-2 {
-            animation-delay: -2s;
-        }
+        .nube-1 { animation-delay: 0s; }
+        .nube-2 { animation-delay: -2s; }
+        .nube-3 { animation-delay: -4s; }
 
-        .nube-3 {
-            animation-delay: -4s;
-        }
-
-        .nube-4 {
-            animation-delay: -1s;
-        }
-
-        /* Hover effect */
         .nube-completa:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
-        /* Contenido dentro de la nube */
         .nube-contenido {
             position: relative;
             z-index: 3;
         }
 
-        /* Sección del mito */
         .mito-parte {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             text-align: center;
         }
 
@@ -1238,46 +482,44 @@ footer {
             align-items: center;
             background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
             color: white;
-            padding: 0.6rem 1.2rem;
-            border-radius: 25px;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
             font-family: 'Comic Neue', cursive;
             font-weight: 700;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+            font-size: 0.8rem;
+            margin-bottom: 0.8rem;
+            box-shadow: 0 3px 10px rgba(255, 107, 107, 0.3);
         }
 
         .etiqueta-mito i {
-            font-size: 1.2rem;
-            margin-right: 0.5rem;
+            font-size: 1rem;
+            margin-right: 0.4rem;
             animation: girar 3s linear infinite;
         }
 
         .texto-mito {
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             color: #c62828;
             font-weight: 600;
             font-style: italic;
-            line-height: 1.4;
+            line-height: 1.3;
             margin: 0;
-            padding: 1rem;
-            border-radius: 15px;
-            border-left: 4px solid #FF6B6B;
+            padding: 0.8rem;
+            border-radius: 12px;
+            border-left: 3px solid #FF6B6B;
         }
 
-        /* Separador */
         .separador-nube {
             text-align: center;
-            margin: 1.5rem 0;
+            margin: 1rem 0;
         }
 
         .separador-nube i {
             color: #FFD166;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             animation: brillar 2s ease-in-out infinite;
         }
 
-        /* Sección de la realidad */
         .realidad-parte {
             text-align: center;
         }
@@ -1287,166 +529,496 @@ footer {
             align-items: center;
             background: linear-gradient(135deg, #4ECDC4, #6FDDCC);
             color: white;
-            padding: 0.6rem 1.2rem;
-            border-radius: 25px;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
             font-family: 'Comic Neue', cursive;
             font-weight: 700;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+            font-size: 0.8rem;
+            margin-bottom: 0.8rem;
+            box-shadow: 0 3px 10px rgba(78, 205, 196, 0.3);
         }
 
         .etiqueta-realidad i {
-            font-size: 1.2rem;
-            margin-right: 0.5rem;
+            font-size: 1rem;
+            margin-right: 0.4rem;
             animation: pulsar 2s ease-in-out infinite;
         }
 
         .texto-realidad {
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             color: #2e7d32;
             font-weight: 600;
-            line-height: 1.4;
+            line-height: 1.3;
             margin: 0;
-            padding: 1rem;
-            border-radius: 15px;
-            border-left: 4px solid #4ECDC4;
+            padding: 0.8rem;
+            border-radius: 12px;
+            border-left: 3px solid #4ECDC4;
         }
 
-        /* Animaciones */
+        /* =====================================================
+           BENEFICIOS CENTRADOS
+        ===================================================== */
+        .beneficios-section {
+            text-align: center;
+        }
+
+        .beneficios-section h2 {
+            text-align: center;
+            margin: 1.5rem auto 1rem auto;
+            display: block;
+            width: 100%;
+        }
+
+        .beneficios-section h2::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 3px;
+            background: var(--color-secondary);
+        }
+
+        .beneficios-lista {
+            list-style: none;
+            padding: 0;
+            font-size: 1.1rem;
+            display: inline-block;
+            text-align: left;
+            margin: 0 auto;
+        }
+
+        .beneficios-lista li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .beneficios-lista i {
+            margin-right: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        /* =====================================================
+           DATOS IMPORTANTES CON GRADIENTES ÚNICOS
+        ===================================================== */
+        .datos-importantes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .dato-card {
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .dato-card-1 {
+            background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+        }
+
+        .dato-card-2 {
+            background: linear-gradient(135deg, #4ECDC4, #6FDDCC);
+        }
+
+        .dato-card-3 {
+            background: linear-gradient(135deg, #9B59B6, #BB74D4);
+        }
+
+        .dato-card:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .dato-card h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-family: 'Comic Neue', cursive;
+        }
+
+        .dato-card p {
+            font-size: 0.9rem;
+            line-height: 1.3;
+        }
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+        footer {
+            background: var(--color-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .footer-logo {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .footer-logo:hover {
+            transform: translateY(-3px);
+        }
+
+        .footer-logo img {
+            height: 80px;
+            width: auto;
+            display: block;
+        }
+
+        .social-icons {
+            margin-top: 0.8rem;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 12px;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--color-accent);
+            transform: translateY(-3px);
+        }
+
+        .university-info {
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        /* =====================================================
+           ANIMACIONES
+        ===================================================== */
         @keyframes flotar {
             0%, 100% {
                 transform: translateY(0px) rotate(0deg);
             }
             33% {
-                transform: translateY(-10px) rotate(0.5deg);
+                transform: translateY(-8px) rotate(0.3deg);
             }
             66% {
-                transform: translateY(-5px) rotate(-0.5deg);
+                transform: translateY(-4px) rotate(-0.3deg);
             }
         }
 
         @keyframes girar {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         @keyframes pulsar {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            50% {
-                transform: scale(1.1);
-                opacity: 0.8;
-            }
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
         }
 
         @keyframes brillar {
-            0%, 100% {
-                opacity: 0.7;
-                transform: scale(1);
+            0%, 100% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            animation-delay: 0.3s;
+        }
+
+        .animated {
+            animation: fadeInUp 0.8s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
             }
-            50% {
+            to {
                 opacity: 1;
-                transform: scale(1.2);
+                transform: translateY(0);
             }
         }
 
         /* =====================================================
-           RESPONSIVE DESIGN
+           RESPONSIVE DESIGN - MÓVIL OPTIMIZADO
         ===================================================== */
         @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 10px 0;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+                margin: 1rem 0 0.8rem;
+            }
+            
+            .header-logo {
+                position: static;
+                margin: 0 auto 1rem;
+                display: inline-block;
+            }
+            
+            .header-logo img {
+                height: 35px;
+            }
+            
+            .title-inner {
+                gap: 0.5rem;
+            }
+            
+            .title-icon,
+            .title-icon-right {
+                font-size: 1.5rem;
+            }
+            
+            .title-ribbon {
+                font-size: 0.7rem;
+                padding: 0.2rem 0.8rem;
+            }
+            
+            /* Secciones más compactas */
+            .consejos, 
+            .informacion,
+            .mitos-realidades {
+                padding: 1.2rem;
+                margin-bottom: 1.2rem;
+            }
+            
+            /* Tips grid responsivo */
+            .tips-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.8rem;
+            }
+            
+            .tips-grid .tip-card:nth-child(5),
+            .tips-grid .tip-card:nth-child(6) {
+                grid-column: span 1;
+            }
+            
+            .tip-card {
+                padding: 0.8rem;
+                min-height: 160px;
+            }
+            
+            .tip-card h3 {
+                font-size: 1rem;
+            }
+            
+            .tip-card p {
+                font-size: 0.75rem;
+            }
+            
             /* Recetas en móviles - una por fila */
             .fila-recetas {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .merienda-image-compacta {
+                height: 140px;
+            }
+            
+            .merienda-content-compacta h4 {
+                font-size: 0.85rem;
+            }
+            
+            .receta-compacta ul {
+                font-size: 0.7rem;
+            }
+            
+            .receta-compacta p {
+                font-size: 0.7rem;
+            }
+            
+            /* Nubes responsive */
+            .nubes-container {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
             
-            .merienda-card-compacta {
-                max-width: none;
-            }
-
-            .merienda-image-compacta {
-                height: 180px;
-            }
-
-            .merienda-content-compacta {
-                padding: 1.2rem;
-            }
-
-            .receta-compacta ul {
-                font-size: 0.85rem;
-            }
-
-            .receta-compacta p {
-                font-size: 0.85rem;
-            }
-
-            /* Nubes responsive */
-            .nubes-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
+            .nube-completa {
+                padding: 1.5rem;
             }
             
-            .nube-completa {
-                padding: 2rem;
-            }
-
             .mitos-realidades {
-                padding: 3rem 1.5rem;
+                padding: 2rem 1.2rem;
             }
-
+            
             .texto-mito, .texto-realidad {
-                font-size: 1rem;
-                padding: 0.8rem;
+                font-size: 0.85rem;
+                padding: 0.7rem;
+            }
+            
+            /* Datos importantes más compactos */
+            .datos-importantes {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .dato-card {
+                padding: 1.2rem;
+            }
+            
+            .dato-card h3 {
+                font-size: 2rem;
+            }
+            
+            .dato-card p {
+                font-size: 0.85rem;
+            }
+            
+            /* Footer más compacto */
+            .footer-content {
+                gap: 1.2rem;
+            }
+            
+            .footer-logo img {
+                height: 60px;
+            }
+            
+            .social-icons a {
+                font-size: 1.3rem;
+                margin: 0 10px;
             }
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            h2 {
+                font-size: 1.2rem;
+            }
+            
+            .header-logo img {
+                height: 30px;
+            }
+            
+            .consejos, 
+            .informacion,
+            .mitos-realidades {
+                padding: 1rem;
+            }
+            
+            .tips-grid {
+                grid-template-columns: 1fr;
+                gap: 0.6rem;
+            }
+            
+            .tip-card {
+                padding: 0.6rem;
+                min-height: 140px;
+            }
+            
             .nube-completa::before,
             .nube-completa::after {
                 display: none;
             }
             
             .etiqueta-mito, .etiqueta-realidad {
-                font-size: 0.9rem;
-                padding: 0.5rem 1rem;
+                font-size: 0.7rem;
+                padding: 0.3rem 0.6rem;
             }
             
             .separador-nube i {
-                font-size: 1.2rem;
-            }
-
-            .meriendas-grid-optimizada {
-                gap: 1.5rem;
-            }
-
-            .merienda-content-compacta h4 {
                 font-size: 1rem;
             }
-        }
-
-        @media (max-width: 480px) {
+            
             .merienda-image-compacta {
-                height: 150px;
+                height: 120px;
             }
             
             .merienda-content-compacta {
-                padding: 1rem;
+                padding: 0.8rem;
             }
-
+            
             .receta-compacta ul {
-                font-size: 0.8rem;
-                padding-left: 0.8rem;
+                font-size: 0.65rem;
+                padding-left: 0.6rem;
             }
-
+            
             .receta-compacta p {
+                font-size: 0.65rem;
+                padding: 0.5rem;
+            }
+            
+            .footer-logo img {
+                height: 50px;
+            }
+            
+            .social-icons a {
+                font-size: 1.2rem;
+                margin: 0 8px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .container {
+                width: 98%;
+            }
+            
+            h1 {
+                font-size: 1.4rem;
+            }
+            
+            .consejos, 
+            .informacion,
+            .mitos-realidades {
+                padding: 0.8rem;
+                margin-bottom: 1rem;
+            }
+            
+            .tip-card {
+                padding: 0.5rem;
+                min-height: 120px;
+            }
+            
+            .tip-card h3 {
+                font-size: 0.9rem;
+            }
+            
+            .tip-card p {
+                font-size: 0.7rem;
+            }
+            
+            .nube-completa {
+                padding: 1.2rem;
+            }
+            
+            .merienda-content-compacta h4 {
                 font-size: 0.8rem;
-                padding: 0.6rem;
             }
         }
